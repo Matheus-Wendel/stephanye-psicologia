@@ -1,7 +1,7 @@
 "use client";
 import { Playfair_Display, Roboto_Flex } from "next/font/google";
 import { Button, Header } from "@/components";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { userAgent } from 'next/server'
 const playfair = Playfair_Display({ subsets: ["latin"] });
@@ -9,19 +9,13 @@ const roboto = Roboto_Flex({ subsets: ["latin"] });
 
 const Home = () => {
   const [externalActual, setExternalActual] = useState(1);
-  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [isMobile, setIsMobile] = useState(true); //the initial state depends on mobile-first or desktop-first strategy
 
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
   useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-      window.removeEventListener('resize', handleWindowSizeChange);
-    }
-  }, []);
+    setIsMobile(window.innerWidth <= 767.98)
+  }, [])
 
-  const isMobile = width <= 768;
+
 
   const renderAbout = () => {
     return (

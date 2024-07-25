@@ -190,7 +190,7 @@ const Home = () => {
               onClick={() => {
                 window
                   ?.open(
-                    "https://wa.me/5511953239185?text=Oie%2C%2520gostaria%2520de%2520conhecer%2520mais%2520sobre%2520seu%2520atendimento",
+                    "https://wa.me/5511953239185?text=Oie%2C%20gostaria%20de%20conhecer%20mais%20sobre%20seu%20atendimento",
                     "_blank",
                   )
                   ?.focus();
@@ -279,7 +279,7 @@ const Home = () => {
                     onClick={() => {
                       window
                         ?.open(
-                          "https://wa.me/5511953239185?text=Oie%2C%2520gostaria%2520de%2520conhecer%2520mais%2520sobre%2520seu%2520atendimento",
+                          "https://wa.me/5511953239185?text=Oie%2C%20gostaria%20de%20conhecer%20mais%20sobre%20seu%20atendimento",
                           "_blank",
                         )
                         ?.focus();

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import "./global.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={playfair.className}>{children}</body>
+      <GoogleAnalytics gaId="G-FJ21S60JXC"></GoogleAnalytics>
     </html>
   );
 }
